@@ -6,7 +6,6 @@ sql.open("./assets/guildsettings.sqlite");
 const invitecheck = ["discord.gg", "discord.me", "discord.io/", "discordapp.com/invite"]
 const weblinkcheck = ["http", "www.", ".com", ".net", ".org", ".ca", ".co.uk"]
 
-const config = require("./assets/jsons/config.json");
 
 client.on('warn', err => console.warn('[WARNING]', err));
 
@@ -314,4 +313,4 @@ client.on("message", async (message) => {
 
 });
 
-client.login(config.token);
+client.login(process.env.BOT_TOKEN)
